@@ -51,6 +51,13 @@ func _ready():
 	await frog.animation_finished
 	set_physics_process(true)
 
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.is_action_pressed("restart"):
+			get_tree().reload_current_scene()
+		elif event.is_action_pressed("reset"):
+			get_tree().change_scene_to_file("res://Scenes/Levels/level_base.tscn")
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
