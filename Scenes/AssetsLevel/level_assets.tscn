@@ -1,0 +1,550 @@
+[gd_scene load_steps=88 format=3 uid="uid://l1ag4xrkfofv"]
+
+[ext_resource type="Texture2D" uid="uid://jpncthk3dyx3" path="res://Assets/PixelAdventure/Background/Blue.png" id="1_qpbk7"]
+[ext_resource type="Texture2D" uid="uid://b67bo310pn16t" path="res://Assets/PixelAdventure/Background/Brown.png" id="2_wno03"]
+[ext_resource type="Texture2D" uid="uid://drc0x4wpyfe8p" path="res://Assets/PixelAdventure/Background/Gray.png" id="3_iheio"]
+[ext_resource type="Texture2D" uid="uid://cphlc8unmwhly" path="res://Assets/PixelAdventure/Background/Green.png" id="4_ewn4k"]
+[ext_resource type="Texture2D" uid="uid://bnnnr425w1yun" path="res://Assets/PixelAdventure/Background/Pink.png" id="5_fw8c1"]
+[ext_resource type="Texture2D" uid="uid://tsk0q5ox518p" path="res://Assets/PixelAdventure/Background/Purple.png" id="6_hi3tf"]
+[ext_resource type="Texture2D" uid="uid://2yaq1rkdxgwt" path="res://Assets/PixelAdventure/Background/Yellow.png" id="7_fijrr"]
+[ext_resource type="Texture2D" uid="uid://djk2rhs0xcfdc" path="res://Assets/PixelAdventure/Items/Boxes/Box1/Break.png" id="8_o3vlf"]
+[ext_resource type="Texture2D" uid="uid://cj4wqm8n62eqa" path="res://Assets/PixelAdventure/Items/Boxes/Box1/Idle.png" id="9_st1l4"]
+[ext_resource type="Texture2D" uid="uid://cvhl5fc2e1oyn" path="res://Assets/PixelAdventure/Items/Boxes/Box1/Hit (28x24).png" id="10_0tgpd"]
+[ext_resource type="Texture2D" uid="uid://c71h77gb3umxp" path="res://Assets/PixelAdventure/Items/Boxes/Box2/Break.png" id="11_4m25y"]
+[ext_resource type="Texture2D" uid="uid://bjthbicsbp2cj" path="res://Assets/PixelAdventure/Items/Boxes/Box2/Hit (28x24).png" id="12_dtokc"]
+[ext_resource type="Texture2D" uid="uid://6tdxa6ylwsck" path="res://Assets/PixelAdventure/Items/Boxes/Box2/Idle.png" id="13_4sak6"]
+[ext_resource type="Texture2D" uid="uid://7vkf63fedfim" path="res://Assets/PixelAdventure/Items/Boxes/Box3/Break.png" id="14_38u5o"]
+[ext_resource type="Texture2D" uid="uid://3f44u5goy0u1" path="res://Assets/PixelAdventure/Items/Boxes/Box3/Hit (28x24).png" id="15_565pb"]
+[ext_resource type="Texture2D" uid="uid://cc7gjuriqj5mb" path="res://Assets/PixelAdventure/Items/Boxes/Box3/Idle.png" id="16_xn2rm"]
+[ext_resource type="Texture2D" uid="uid://beyoiarvjhdvx" path="res://Assets/PixelAdventure/Items/Checkpoints/Checkpoint/Checkpoint (Flag Idle)(64x64).png" id="17_p7svb"]
+[ext_resource type="Texture2D" uid="uid://kj3e3n3revbo" path="res://Assets/PixelAdventure/Items/Checkpoints/Checkpoint/Checkpoint (Flag Out) (64x64).png" id="18_c4r5r"]
+[ext_resource type="Texture2D" uid="uid://xebxhjdkk14t" path="res://Assets/PixelAdventure/Items/Checkpoints/Checkpoint/Checkpoint (No Flag).png" id="19_xfrdg"]
+[ext_resource type="Texture2D" uid="uid://0a4qfv5upwuv" path="res://Assets/PixelAdventure/Items/Checkpoints/End/End (Idle).png" id="20_8ec6a"]
+[ext_resource type="Texture2D" uid="uid://p8k6iy2s7oye" path="res://Assets/PixelAdventure/Items/Checkpoints/End/End (Pressed) (64x64).png" id="21_wi75y"]
+[ext_resource type="Texture2D" uid="uid://cow62o5w0fa62" path="res://Assets/PixelAdventure/Items/Checkpoints/Start/Start (Idle).png" id="22_rur7s"]
+[ext_resource type="Texture2D" uid="uid://cikq8bu26ns7i" path="res://Assets/PixelAdventure/Items/Checkpoints/Start/Start (Moving) (64x64).png" id="23_51yls"]
+[ext_resource type="Texture2D" uid="uid://byi7up7kqoy5w" path="res://Assets/PixelAdventure/Items/Fruits/Apple.png" id="24_38kgy"]
+[ext_resource type="Texture2D" uid="uid://dy61gc644161n" path="res://Assets/PixelAdventure/Items/Fruits/Bananas.png" id="25_bpry6"]
+[ext_resource type="Texture2D" uid="uid://bki5sarygv01a" path="res://Assets/PixelAdventure/Items/Fruits/Cherries.png" id="26_ivbt3"]
+[ext_resource type="Texture2D" uid="uid://cu1erndkmnion" path="res://Assets/PixelAdventure/Items/Fruits/Collected.png" id="27_8381q"]
+[ext_resource type="Texture2D" uid="uid://b5wxp1fh1o3u7" path="res://Assets/PixelAdventure/Items/Fruits/Kiwi.png" id="28_1d6u0"]
+[ext_resource type="Texture2D" uid="uid://cl2tfiyrihbxf" path="res://Assets/PixelAdventure/Items/Fruits/Melon.png" id="29_lmb5g"]
+[ext_resource type="Texture2D" uid="uid://b3r5vyjl0wlmt" path="res://Assets/PixelAdventure/Items/Fruits/Orange.png" id="30_lnin5"]
+[ext_resource type="Texture2D" uid="uid://dhk01wb7p0gqj" path="res://Assets/PixelAdventure/Items/Fruits/Pineapple.png" id="31_e7auj"]
+[ext_resource type="Texture2D" uid="uid://bidbxjqsufcao" path="res://Assets/PixelAdventure/Items/Fruits/Strawberry.png" id="32_lqau7"]
+[ext_resource type="Texture2D" uid="uid://bsgpcsjjduh2e" path="res://Assets/PixelAdventure/Main Characters/Ninja Frog/Double Jump (32x32).png" id="40_4qbt3"]
+[ext_resource type="PackedScene" uid="uid://ch2tqslnkyv5w" path="res://Scenes/Player/frog_animated.tscn" id="40_mcuit"]
+[ext_resource type="Texture2D" uid="uid://bbocwnkcm1jmh" path="res://Assets/PixelAdventure/Main Characters/Ninja Frog/Fall (32x32).png" id="41_nuvyo"]
+[ext_resource type="Texture2D" uid="uid://go2wnyo7hfsm" path="res://Assets/PixelAdventure/Menu/Buttons/Achievements.png" id="41_v8508"]
+[ext_resource type="Texture2D" uid="uid://570cmd2r87sw" path="res://Assets/PixelAdventure/Main Characters/Ninja Frog/Hit (32x32).png" id="42_qkwdn"]
+[ext_resource type="Texture2D" uid="uid://cjycdac88rcgw" path="res://Assets/PixelAdventure/Menu/Buttons/Back.png" id="42_y7jp2"]
+[ext_resource type="Texture2D" uid="uid://cy8e4urroan5s" path="res://Assets/PixelAdventure/Main Characters/Ninja Frog/Idle (32x32).png" id="43_rc5xt"]
+[ext_resource type="Texture2D" uid="uid://dlutb0qmggr6o" path="res://Assets/PixelAdventure/Menu/Buttons/Close.png" id="43_t2slc"]
+[ext_resource type="Texture2D" uid="uid://cftdqkvtw1yh5" path="res://Assets/PixelAdventure/Menu/Buttons/Leaderboard.png" id="44_61i8a"]
+[ext_resource type="Texture2D" uid="uid://73imkhgdt3fw" path="res://Assets/PixelAdventure/Main Characters/Ninja Frog/Jump (32x32).png" id="44_hyenm"]
+[ext_resource type="Texture2D" uid="uid://dd6pco5xblw0r" path="res://Assets/PixelAdventure/Main Characters/Ninja Frog/Run (32x32).png" id="45_3qkxp"]
+[ext_resource type="Texture2D" uid="uid://4twxof2o3sol" path="res://Assets/PixelAdventure/Menu/Buttons/Levels.png" id="45_7oldg"]
+[ext_resource type="Texture2D" uid="uid://bid275lo5edtr" path="res://Assets/PixelAdventure/Menu/Buttons/Next.png" id="46_10o1p"]
+[ext_resource type="Texture2D" uid="uid://b8ffy0yic38rs" path="res://Assets/PixelAdventure/Main Characters/Ninja Frog/Wall Jump (32x32).png" id="46_ti7bj"]
+[ext_resource type="Texture2D" uid="uid://2ixgicp7hbj" path="res://Assets/PixelAdventure/Menu/Buttons/Play.png" id="47_42f55"]
+[ext_resource type="Texture2D" uid="uid://cfps6q3hk5opn" path="res://Assets/PixelAdventure/Menu/Buttons/Previous.png" id="48_g8s6i"]
+[ext_resource type="Texture2D" uid="uid://cjskvuotnxd8o" path="res://Assets/PixelAdventure/Menu/Buttons/Restart.png" id="49_k3gg6"]
+[ext_resource type="Texture2D" uid="uid://cge1sud7dwqr6" path="res://Assets/PixelAdventure/Menu/Buttons/Settings.png" id="50_q7xwf"]
+[ext_resource type="Texture2D" uid="uid://547d7icgkjjw" path="res://Assets/PixelAdventure/Menu/Buttons/Volume.png" id="51_xc3tj"]
+[ext_resource type="Texture2D" uid="uid://dupb0r6v6wi11" path="res://Assets/PixelAdventure/Menu/Text/Text (White) (8x10).png" id="52_yvqog"]
+[ext_resource type="Texture2D" uid="uid://b07wm7k0b8g8k" path="res://Assets/PixelAdventure/Menu/Text/Text (Black) (8x10).png" id="53_tujs8"]
+[ext_resource type="Texture2D" uid="uid://bad00kw2p1h51" path="res://Assets/PixelAdventure/Other/Confetti (16x16).png" id="54_s6k6s"]
+[ext_resource type="Texture2D" uid="uid://dck6d8sg872mb" path="res://Assets/PixelAdventure/Other/Dust Particle.png" id="55_cnx5k"]
+[ext_resource type="Texture2D" uid="uid://6xlpusvbsqld" path="res://Assets/PixelAdventure/Other/Shadow.png" id="56_5asny"]
+[ext_resource type="Texture2D" uid="uid://bgsgbfmlc41ei" path="res://Assets/PixelAdventure/Other/Transition.png" id="57_36plo"]
+[ext_resource type="Texture2D" uid="uid://n1jfjo4733ru" path="res://Assets/PixelAdventure/Terrain/Terrain (16x16).png" id="58_iysvk"]
+[ext_resource type="Texture2D" uid="uid://dufvklm35388x" path="res://Assets/PixelAdventure/Traps/Falling Platforms/Off.png" id="64_j5cyq"]
+[ext_resource type="Texture2D" uid="uid://bdshx7vdj7vw3" path="res://Assets/PixelAdventure/Traps/Falling Platforms/On (32x10).png" id="65_v41sd"]
+[ext_resource type="Texture2D" uid="uid://c5e5n670tlhro" path="res://Assets/PixelAdventure/Traps/Fire/Hit (16x32).png" id="68_x1hcn"]
+[ext_resource type="Texture2D" uid="uid://bjlbagkfrvdna" path="res://Assets/PixelAdventure/Traps/Fire/Off.png" id="69_a0fwt"]
+[ext_resource type="Texture2D" uid="uid://brmtw15qjsetu" path="res://Assets/PixelAdventure/Traps/Fire/On (16x32).png" id="70_b3w5c"]
+[ext_resource type="Texture2D" uid="uid://cw71i3fs02d8c" path="res://Assets/PixelAdventure/Traps/Platforms/Brown Off.png" id="71_m2i54"]
+[ext_resource type="Texture2D" uid="uid://bwhkdl0qkp1ts" path="res://Assets/PixelAdventure/Traps/Platforms/Brown On (32x8).png" id="72_174p0"]
+[ext_resource type="Texture2D" uid="uid://b26m2wsy6al3r" path="res://Assets/PixelAdventure/Traps/Platforms/Chain.png" id="73_w7tfl"]
+[ext_resource type="Texture2D" uid="uid://xwiihfvf0jir" path="res://Assets/PixelAdventure/Traps/Platforms/Grey Off.png" id="74_d6xnt"]
+[ext_resource type="Texture2D" uid="uid://cqdkm0vpkapv3" path="res://Assets/PixelAdventure/Traps/Platforms/Grey On (32x8).png" id="75_41l0o"]
+[ext_resource type="Texture2D" uid="uid://v3u8pfr2rvoy" path="res://Assets/PixelAdventure/Traps/Rock Head/Blink (42x42).png" id="76_j8cl3"]
+[ext_resource type="Texture2D" uid="uid://caulol3oxo4tc" path="res://Assets/PixelAdventure/Traps/Rock Head/Bottom Hit (42x42).png" id="77_1uuhy"]
+[ext_resource type="Texture2D" uid="uid://cy5g3jx03u5tu" path="res://Assets/PixelAdventure/Traps/Rock Head/Idle.png" id="78_owxub"]
+[ext_resource type="Texture2D" uid="uid://ca76urwfqj4dy" path="res://Assets/PixelAdventure/Traps/Rock Head/Left Hit (42x42).png" id="79_0jfoh"]
+[ext_resource type="Texture2D" uid="uid://ye5dpg4wim3" path="res://Assets/PixelAdventure/Traps/Rock Head/Right Hit (42x42).png" id="80_orxvj"]
+[ext_resource type="Texture2D" uid="uid://bu36w7rb3bgv7" path="res://Assets/PixelAdventure/Traps/Rock Head/Top Hit (42x42).png" id="81_or144"]
+[ext_resource type="Texture2D" uid="uid://ffv33hxvr8j4" path="res://Assets/PixelAdventure/Traps/Saw/Chain.png" id="86_rwxf6"]
+[ext_resource type="Texture2D" uid="uid://dd7vmpcnx5pcd" path="res://Assets/PixelAdventure/Traps/Saw/Off.png" id="87_tjmhx"]
+[ext_resource type="Texture2D" uid="uid://dserfcughyr42" path="res://Assets/PixelAdventure/Traps/Saw/On (38x38).png" id="88_h2l4x"]
+[ext_resource type="Texture2D" uid="uid://rl8vhwiupuw6" path="res://Assets/PixelAdventure/Traps/Spike Head/Blink (54x52).png" id="89_ijdu6"]
+[ext_resource type="Texture2D" uid="uid://byosyvn51mrlr" path="res://Assets/PixelAdventure/Traps/Spike Head/Bottom Hit (54x52).png" id="90_pws7i"]
+[ext_resource type="Texture2D" uid="uid://c7psip3i06bry" path="res://Assets/PixelAdventure/Traps/Spike Head/Idle.png" id="91_ci6ai"]
+[ext_resource type="Texture2D" uid="uid://ya537e1dngse" path="res://Assets/PixelAdventure/Traps/Spike Head/Left Hit (54x52).png" id="92_j3n8s"]
+[ext_resource type="Texture2D" uid="uid://bs0xdhp8r574f" path="res://Assets/PixelAdventure/Traps/Spike Head/Right Hit (54x52).png" id="93_ujswb"]
+[ext_resource type="Texture2D" uid="uid://ddepjlb1gh8gt" path="res://Assets/PixelAdventure/Traps/Spike Head/Top Hit (54x52).png" id="94_qngxc"]
+[ext_resource type="Texture2D" uid="uid://s6hdp7eemyth" path="res://Assets/PixelAdventure/Traps/Spiked Ball/Chain.png" id="95_7peju"]
+[ext_resource type="Texture2D" uid="uid://dt3ceesv8i5ys" path="res://Assets/PixelAdventure/Traps/Spikes/Idle.png" id="97_cmtug"]
+[ext_resource type="Texture2D" uid="uid://7bk5dg7uio8q" path="res://Assets/PixelAdventure/Traps/Trampoline/Idle.png" id="98_s88bg"]
+[ext_resource type="Texture2D" uid="uid://b05bcfgkrjnnr" path="res://Assets/PixelAdventure/Traps/Trampoline/Jump (28x28).png" id="99_mltr0"]
+
+[node name="LevelAssets" type="Node"]
+metadata/_edit_horizontal_guides_ = []
+
+[node name="Background" type="Node" parent="."]
+
+[node name="Blue" type="Sprite2D" parent="Background"]
+texture_filter = 1
+position = Vector2(32, 32)
+texture = ExtResource("1_qpbk7")
+
+[node name="Brown" type="Sprite2D" parent="Background"]
+texture_filter = 1
+position = Vector2(32, 96)
+texture = ExtResource("2_wno03")
+
+[node name="Gray" type="Sprite2D" parent="Background"]
+texture_filter = 1
+position = Vector2(32, 160)
+texture = ExtResource("3_iheio")
+
+[node name="Green" type="Sprite2D" parent="Background"]
+texture_filter = 1
+position = Vector2(32, 224)
+texture = ExtResource("4_ewn4k")
+
+[node name="Pink" type="Sprite2D" parent="Background"]
+texture_filter = 1
+position = Vector2(96, 32)
+texture = ExtResource("5_fw8c1")
+
+[node name="Purple" type="Sprite2D" parent="Background"]
+texture_filter = 1
+position = Vector2(96, 96)
+texture = ExtResource("6_hi3tf")
+
+[node name="Yellow" type="Sprite2D" parent="Background"]
+texture_filter = 1
+position = Vector2(96, 160)
+texture = ExtResource("7_fijrr")
+
+[node name="Items" type="Node" parent="."]
+
+[node name="Box1" type="Node" parent="Items"]
+
+[node name="Break" type="Sprite2D" parent="Items/Box1"]
+texture_filter = 1
+position = Vector2(250, 72)
+texture = ExtResource("8_o3vlf")
+
+[node name="Idle" type="Sprite2D" parent="Items/Box1"]
+texture_filter = 1
+position = Vector2(208, 16)
+texture = ExtResource("9_st1l4")
+
+[node name="Hit(28x24)" type="Sprite2D" parent="Items/Box1"]
+texture_filter = 1
+position = Vector2(232, 48)
+texture = ExtResource("10_0tgpd")
+
+[node name="Box2" type="Node" parent="Items"]
+
+[node name="Break" type="Sprite2D" parent="Items/Box2"]
+texture_filter = 1
+position = Vector2(248, 160)
+texture = ExtResource("11_4m25y")
+
+[node name="Hit(28x24)" type="Sprite2D" parent="Items/Box2"]
+texture_filter = 1
+position = Vector2(248, 136)
+texture = ExtResource("12_dtokc")
+
+[node name="Idle" type="Sprite2D" parent="Items/Box2"]
+texture_filter = 1
+position = Vector2(208, 112)
+texture = ExtResource("13_4sak6")
+
+[node name="Box3" type="Node" parent="Items"]
+
+[node name="Break" type="Sprite2D" parent="Items/Box3"]
+texture_filter = 1
+position = Vector2(248, 256)
+texture = ExtResource("14_38u5o")
+
+[node name="Hit(28x24)" type="Sprite2D" parent="Items/Box3"]
+texture_filter = 1
+position = Vector2(222, 232)
+texture = ExtResource("15_565pb")
+
+[node name="Idle" type="Sprite2D" parent="Items/Box3"]
+texture_filter = 1
+position = Vector2(208, 208)
+texture = ExtResource("16_xn2rm")
+
+[node name="Checkpoint" type="Node" parent="Items"]
+
+[node name="Base" type="Node" parent="Items/Checkpoint"]
+
+[node name="Checkpoint(flagIdle)(64x64)" type="Sprite2D" parent="Items/Checkpoint/Base"]
+texture_filter = 1
+position = Vector2(640, 32)
+texture = ExtResource("17_p7svb")
+
+[node name="Checkpoint(flagOut)(64x64)" type="Sprite2D" parent="Items/Checkpoint/Base"]
+texture_filter = 1
+position = Vector2(1144, 104)
+texture = ExtResource("18_c4r5r")
+
+[node name="Checkpoint(noFlag)" type="Sprite2D" parent="Items/Checkpoint/Base"]
+texture_filter = 1
+position = Vector2(352, 176)
+texture = ExtResource("19_xfrdg")
+
+[node name="End" type="Node" parent="Items/Checkpoint"]
+
+[node name="End(idle)" type="Sprite2D" parent="Items/Checkpoint/End"]
+position = Vector2(352, 272)
+texture = ExtResource("20_8ec6a")
+
+[node name="End(pressed)(64x64)" type="Sprite2D" parent="Items/Checkpoint/End"]
+position = Vector2(576, 336)
+texture = ExtResource("21_wi75y")
+
+[node name="Start" type="Node" parent="Items/Checkpoint"]
+
+[node name="Start(idle)" type="Sprite2D" parent="Items/Checkpoint/Start"]
+texture_filter = 1
+position = Vector2(352, 416)
+texture = ExtResource("22_rur7s")
+
+[node name="Start(moving)(64x64)" type="Sprite2D" parent="Items/Checkpoint/Start"]
+texture_filter = 1
+position = Vector2(864, 480)
+texture = ExtResource("23_51yls")
+
+[node name="Fruits" type="Node" parent="Items"]
+
+[node name="Apple" type="Sprite2D" parent="Items/Fruits"]
+texture_filter = 1
+position = Vector2(592, 560)
+texture = ExtResource("24_38kgy")
+
+[node name="Bananas" type="Sprite2D" parent="Items/Fruits"]
+texture_filter = 1
+position = Vector2(592, 584)
+texture = ExtResource("25_bpry6")
+
+[node name="Cherries" type="Sprite2D" parent="Items/Fruits"]
+texture_filter = 1
+position = Vector2(592, 600)
+texture = ExtResource("26_ivbt3")
+
+[node name="Collected" type="Sprite2D" parent="Items/Fruits"]
+texture_filter = 1
+position = Vector2(416, 616)
+texture = ExtResource("27_8381q")
+
+[node name="Kiwi" type="Sprite2D" parent="Items/Fruits"]
+texture_filter = 1
+position = Vector2(592, 640)
+texture = ExtResource("28_1d6u0")
+
+[node name="Melon" type="Sprite2D" parent="Items/Fruits"]
+texture_filter = 1
+position = Vector2(592, 664)
+texture = ExtResource("29_lmb5g")
+
+[node name="Orange" type="Sprite2D" parent="Items/Fruits"]
+texture_filter = 1
+position = Vector2(592, 680)
+texture = ExtResource("30_lnin5")
+
+[node name="Pineapple" type="Sprite2D" parent="Items/Fruits"]
+texture_filter = 1
+position = Vector2(592, 696)
+texture = ExtResource("31_e7auj")
+
+[node name="Strawberry" type="Sprite2D" parent="Items/Fruits"]
+texture_filter = 1
+position = Vector2(592, 720)
+texture = ExtResource("32_lqau7")
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="NinjaFrog" type="Node" parent="Characters"]
+
+[node name="DoubleJump(32x32)" type="Sprite2D" parent="Characters/NinjaFrog"]
+texture_filter = 1
+position = Vector2(200, 440)
+texture = ExtResource("40_4qbt3")
+
+[node name="Fall(32x32)" type="Sprite2D" parent="Characters/NinjaFrog"]
+texture_filter = 1
+position = Vector2(-8, 440)
+texture = ExtResource("41_nuvyo")
+
+[node name="Hit(32x32)" type="Sprite2D" parent="Characters/NinjaFrog"]
+texture_filter = 1
+position = Vector2(-40, 536)
+texture = ExtResource("42_qkwdn")
+
+[node name="Idle(32x32)" type="Sprite2D" parent="Characters/NinjaFrog"]
+texture_filter = 1
+position = Vector2(24, 400)
+texture = ExtResource("43_rc5xt")
+
+[node name="Jump(32x32)" type="Sprite2D" parent="Characters/NinjaFrog"]
+texture_filter = 1
+position = Vector2(-136, 432)
+texture = ExtResource("44_hyenm")
+
+[node name="Run(32x32)" type="Sprite2D" parent="Characters/NinjaFrog"]
+texture_filter = 1
+position = Vector2(40, 504)
+texture = ExtResource("45_3qkxp")
+
+[node name="WallJump(32x32)" type="Sprite2D" parent="Characters/NinjaFrog"]
+texture_filter = 1
+position = Vector2(-72, 472)
+texture = ExtResource("46_ti7bj")
+
+[node name="Frog" parent="Characters/NinjaFrog" instance=ExtResource("40_mcuit")]
+position = Vector2(-136, 584)
+
+[node name="Menu" type="Node" parent="."]
+
+[node name="Achievements" type="Sprite2D" parent="Menu"]
+texture_filter = 1
+position = Vector2(-69.5, 219)
+texture = ExtResource("41_v8508")
+
+[node name="Back" type="Sprite2D" parent="Menu"]
+texture_filter = 1
+position = Vector2(-51, 219)
+texture = ExtResource("42_y7jp2")
+
+[node name="Close" type="Sprite2D" parent="Menu"]
+texture_filter = 1
+position = Vector2(-35, 219)
+texture = ExtResource("43_t2slc")
+
+[node name="Leaderboard" type="Sprite2D" parent="Menu"]
+texture_filter = 1
+position = Vector2(-69.5, 243)
+texture = ExtResource("44_61i8a")
+
+[node name="Levels" type="Sprite2D" parent="Menu"]
+texture_filter = 1
+position = Vector2(-69.5, 267)
+texture = ExtResource("45_7oldg")
+
+[node name="Next" type="Sprite2D" parent="Menu"]
+texture_filter = 1
+position = Vector2(-69.5, 291)
+texture = ExtResource("46_10o1p")
+
+[node name="Play" type="Sprite2D" parent="Menu"]
+texture_filter = 1
+position = Vector2(-69.5, 315)
+texture = ExtResource("47_42f55")
+
+[node name="Previous" type="Sprite2D" parent="Menu"]
+texture_filter = 1
+position = Vector2(-48, 243)
+texture = ExtResource("48_g8s6i")
+
+[node name="Restart" type="Sprite2D" parent="Menu"]
+texture_filter = 1
+position = Vector2(-48, 267)
+texture = ExtResource("49_k3gg6")
+
+[node name="Settings" type="Sprite2D" parent="Menu"]
+texture_filter = 1
+position = Vector2(-48, 291)
+texture = ExtResource("50_q7xwf")
+
+[node name="Volume" type="Sprite2D" parent="Menu"]
+texture_filter = 1
+position = Vector2(-48, 315)
+texture = ExtResource("51_xc3tj")
+
+[node name="Text(white)(8x10)" type="Sprite2D" parent="Menu"]
+texture_filter = 1
+position = Vector2(-136, 236)
+texture = ExtResource("52_yvqog")
+
+[node name="Text(black)(8x10)" type="Sprite2D" parent="Menu"]
+texture_filter = 1
+position = Vector2(-136, 292)
+texture = ExtResource("53_tujs8")
+
+[node name="Other" type="Node" parent="."]
+
+[node name="Confetti(16x16)" type="Sprite2D" parent="Other"]
+position = Vector2(-88, 178)
+texture = ExtResource("54_s6k6s")
+
+[node name="DustParticle" type="Sprite2D" parent="Other"]
+position = Vector2(-128, 154)
+texture = ExtResource("55_cnx5k")
+
+[node name="Shadow" type="Sprite2D" parent="Other"]
+position = Vector2(-104, 154)
+texture = ExtResource("56_5asny")
+
+[node name="Transition" type="Sprite2D" parent="Other"]
+position = Vector2(-64, 146)
+texture = ExtResource("57_36plo")
+
+[node name="Terrain" type="Node" parent="."]
+
+[node name="Terrain(16x16)" type="Sprite2D" parent="Terrain"]
+position = Vector2(-224, 24)
+texture = ExtResource("58_iysvk")
+
+[node name="Traps" type="Node" parent="."]
+
+[node name="Off" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-331, 832)
+texture = ExtResource("64_j5cyq")
+
+[node name="On(32x10)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-284, 816)
+texture = ExtResource("65_v41sd")
+
+[node name="Hit(16x32)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-144, 798)
+texture = ExtResource("68_x1hcn")
+
+[node name="Off3" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-168, 776)
+texture = ExtResource("69_a0fwt")
+
+[node name="On(16x32)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-152, 832)
+texture = ExtResource("70_b3w5c")
+
+[node name="BrownOff" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-86, 872)
+texture = ExtResource("71_m2i54")
+
+[node name="BrownOn(32x8)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(24, 894)
+texture = ExtResource("72_174p0")
+
+[node name="Chain" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-56, 1008)
+texture = ExtResource("73_w7tfl")
+
+[node name="GreyOff" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-70, 936)
+texture = ExtResource("74_d6xnt")
+
+[node name="GreyOn(32x8)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(16, 952)
+texture = ExtResource("75_41l0o")
+
+[node name="Blink(42x42)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-539, 997)
+texture = ExtResource("76_j8cl3")
+
+[node name="BottomHit(42x42)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-531, 1029)
+texture = ExtResource("77_1uuhy")
+
+[node name="Idle2" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-603, 1069)
+texture = ExtResource("78_owxub")
+
+[node name="LeftHit(42x42)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-531, 1117)
+texture = ExtResource("79_0jfoh")
+
+[node name="RightHit(42x42)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-539, 1165)
+texture = ExtResource("80_orxvj")
+
+[node name="TopHit(42x42)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-523, 1213)
+texture = ExtResource("81_or144")
+
+[node name="Chain2" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-64, 1008)
+texture = ExtResource("86_rwxf6")
+
+[node name="Off4" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-605, 899)
+texture = ExtResource("87_tjmhx")
+
+[node name="On(38x38)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-469, 947)
+texture = ExtResource("88_h2l4x")
+
+[node name="Blink(54x52)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-260, 992)
+texture = ExtResource("89_ijdu6")
+
+[node name="BottomHit(54x52)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-260, 1040)
+texture = ExtResource("90_pws7i")
+
+[node name="Idle3" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-340, 1088)
+texture = ExtResource("91_ci6ai")
+
+[node name="LeftHit(54x52)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-260, 1136)
+texture = ExtResource("92_j3n8s")
+
+[node name="RightHit(54x52)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-268, 1192)
+texture = ExtResource("93_ujswb")
+
+[node name="TopHit(54x52)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-260, 1248)
+texture = ExtResource("94_qngxc")
+
+[node name="Chain3" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-48, 1008)
+texture = ExtResource("95_7peju")
+
+[node name="Idle4" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-544, 1272)
+texture = ExtResource("97_cmtug")
+
+[node name="Idle5" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-504, 1296)
+texture = ExtResource("98_s88bg")
+
+[node name="Jump(28x28)" type="Sprite2D" parent="Traps"]
+texture_filter = 1
+position = Vector2(-410, 1320)
+texture = ExtResource("99_mltr0")

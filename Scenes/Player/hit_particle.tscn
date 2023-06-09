@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://cks8ie6ur420n"]
+
+[ext_resource type="Texture2D" uid="uid://b4ro1n4igp26b" path="res://Scenes/Player/damage_particle.png" id="1_1ll12"]
+[ext_resource type="Script" path="res://Scenes/Player/hit_particle.gd" id="2_f1eor"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2kw7a"]
+emission_shape = 1
+emission_sphere_radius = 4.0
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+spread = 180.0
+gravity = Vector3(0, 98, 0)
+initial_velocity_min = 128.0
+initial_velocity_max = 128.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+damping_min = 100.0
+damping_max = 700.0
+angle_max = 180.0
+scale_min = 0.4
+scale_max = 0.8
+color = Color(0.898039, 0.113725, 0, 0.815686)
+hue_variation_min = 0.05
+hue_variation_max = 0.1
+attractor_interaction_enabled = false
+
+[node name="HitParticle" type="GPUParticles2D"]
+texture_filter = 1
+emitting = false
+amount = 128
+process_material = SubResource("ParticleProcessMaterial_2kw7a")
+texture = ExtResource("1_1ll12")
+one_shot = true
+fixed_fps = 24
+script = ExtResource("2_f1eor")
