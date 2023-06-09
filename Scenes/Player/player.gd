@@ -13,6 +13,9 @@ var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 # statistiques de déplacement du joueur
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
+var max_fall_velocity = abs(JUMP_VELOCITY) * 3:
+	set(mfv):
+		max_fall_velocity = mfv if mfv != -1 else abs(JUMP_VELOCITY) * 3
 @export var jumps : int = 2
 
 # statique de la vie du joueur
@@ -25,11 +28,12 @@ var life : int = max_life:
 			life_changed.emit()
 
 # noeuds du joueur
-@onready var life_bar: ProgressBar = $LifeBar
+@onready var life_bar: ProgressBar = $CanvasLayer/LifeBar
 @onready var player_camera: Camera2D = $PlayerCamera
 @onready var frog: AnimatedSprite2D = $Frog
 @onready var player_collision: CollisionShape2D = $PlayerCollision
 @onready var player_animations: AnimationPlayer = $PlayerAnimations
+@onready var wall_jump_raycast: RayCast2D = $WallJumpRaycast
 
 var start_point := Vector2.ZERO
 var hit_particles_array : Array = []
@@ -58,25 +62,42 @@ func _physics_process(delta: float) -> void:
 
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and jumps > 0:
+		if wall_jump_raycast.is_colliding() and not is_on_floor():
+			return
 		velocity.y = JUMP_VELOCITY
 		jumps -= 1
-	elif Input.is_action_just_pressed("fastdown") and not is_on_floor():
+	elif Input.is_action_just_pressed("fastdown") and not is_on_floor() and frog.animation != "WallJump":
 		gravity *= 20.0
-
+	
+	if wall_jump_raycast.is_colliding():
+		jumps = 1
+		
 	var direction := Input.get_axis("left", "right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	move_and_slide()
-
+	if frog.animation != "WallJump":
+		if direction:
+			velocity.x = direction * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	if not can_wall_jump():
+		max_fall_velocity = -1
+	
 	# vérifie si le joueur change de direction
 	if direction != 0:
 		frog.flip_h = false if direction == 1 else true
+		wall_jump_raycast.target_position.x = 12 if not frog.flip_h else -12
+	
+	velocity.y = clamp(velocity.y, -max_fall_velocity, max_fall_velocity)
+	move_and_slide()
+	
+	if can_wall_jump():
+		frog.play("WallJump")
+		
+		if velocity.y > 1.0:
+			max_fall_velocity = 100
 	
 	# vérifie si le joueur saute, son premier saut
-	if velocity.y < 0 and jumps == 1:
+	elif velocity.y < 0 and jumps == 1:
 		frog.play("Jump")
 	
 	# vérifie si le joueur saute, son deuxième saut
@@ -128,6 +149,9 @@ func death(instant_respawn : bool = false) -> void:
 	for hit_particle in hit_particles_array:
 		hit_particle.queue_free()
 	hit_particles_array.clear()
+
+func can_wall_jump() -> bool:
+	return wall_jump_raycast.is_colliding() and not is_on_floor()
 
 func _on_player_life_changed() -> void:
 	if life <= 0:

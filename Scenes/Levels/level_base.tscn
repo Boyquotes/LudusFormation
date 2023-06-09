@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://byn0c5qulibd4"]
+[gd_scene load_steps=12 format=3 uid="uid://byn0c5qulibd4"]
 
 [ext_resource type="Texture2D" uid="uid://n1jfjo4733ru" path="res://Assets/PixelAdventure/Terrain/Terrain (16x16).png" id="1_f2xuv"]
 [ext_resource type="PackedScene" uid="uid://bol6ds507x7go" path="res://Scenes/Player/player.tscn" id="1_ut1no"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bsbn72jnqtj2j" path="res://Scenes/Traps/Saw/saw_trap.tscn" id="3_f2nqi"]
 [ext_resource type="PackedScene" uid="uid://ceetapqadmawx" path="res://Scenes/Checkpoints/Start/start_point.tscn" id="5_gflnu"]
 [ext_resource type="PackedScene" uid="uid://ktkqsa0kqmeh" path="res://Scenes/Checkpoints/End/end_point.tscn" id="6_suhpl"]
+[ext_resource type="FontFile" uid="uid://dbjwykly8mh7g" path="res://Assets/fonts/Empanada.ttf" id="7_28i66"]
+[ext_resource type="Script" path="res://Scenes/Levels/TimeSpent.gd" id="7_eynju"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1td6t"]
 resource_name = "ground1"
@@ -588,6 +590,12 @@ terrain_set_0/terrain_1/name = "ground2"
 terrain_set_0/terrain_1/color = Color(0.501961, 0, 0.2, 1)
 sources/0 = SubResource("TileSetAtlasSource_1td6t")
 
+[sub_resource type="LabelSettings" id="LabelSettings_wi2bu"]
+font = ExtResource("7_28i66")
+font_size = 72
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
 [node name="LevelBase" type="Node2D"]
 
 [node name="BG" type="NinePatchRect" parent="."]
@@ -603,9 +611,9 @@ axis_stretch_vertical = 2
 [node name="Entities" type="Node" parent="."]
 
 [node name="Player" parent="Entities" instance=ExtResource("1_ut1no")]
-position = Vector2(776, 344)
+position = Vector2(769, 364)
 SPEED = 400.0
-JUMP_VELOCITY = -500.0
+JUMP_VELOCITY = -450.0
 
 [node name="Level" type="Node" parent="."]
 
@@ -727,3 +735,21 @@ position = Vector2(296, 384)
 [node name="EndPoint" parent="Objective" instance=ExtResource("6_suhpl")]
 position = Vector2(1416, 352)
 next_level = "res://Scenes/Levels/level_2.tscn"
+
+[node name="Game" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="TimeSpent" type="Label" parent="Game"]
+texture_filter = 1
+anchors_preset = -1
+anchor_top = 0.868827
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "123"
+label_settings = SubResource("LabelSettings_wi2bu")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_eynju")
+metadata/_edit_use_anchors_ = true
